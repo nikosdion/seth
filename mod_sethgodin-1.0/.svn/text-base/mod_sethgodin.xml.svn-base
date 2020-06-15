@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+    <name>What would Seth Godin do?</name>
+    <author>Nicholas K. Dionysopoulos</author>
+    <creationDate>June 2009</creationDate>
+    <copyright>Copyright (c)2009 Nicholas K. Dionysopoulos / cmsmoz.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3 or later</license>
+    <authorEmail>nicholas@dionysopoulos.me</authorEmail>
+    <authorUrl>www.cmsmoz.com</authorUrl>
+    <version>1.0</version>
+    <description>
+        <![CDATA["What would Seth Godin do?" is a simple
+		Joomla! plugin which allows you to display a customizable message to your
+		first-time visitors. The period of time to consider a visitor
+		new is fully customizable. This module works best if "Show Title"
+		is turned off. Find out more in cmsmoz.com. Note: Requires cookie support
+		on your users' browsers to work correctly.]]>
+    </description>
+    <files>
+        <filename module="mod_sethgodin">mod_sethgodin.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/alert-span.php</filename>
+		<filename>tmpl/yellow-box.php</filename>
+		<filename>tmpl/_error.php</filename>
+    </files>
+    <params>
+        <param name="message" type="textarea"
+		default="Welcome to our site! Please subscribe to our &lt;a href=&quot;[SITE]/index.php?format=feed&amp;type=rss&quot;&gt;RSS feed&lt;/a&gt;."
+		rows="6" cols="40" description="Message to show to new visitors" label="Custom Message" />
+		<param name="newvisits" type="text" default="3" label="New user Visit Limit" description="After how many visits the visitor isn't considered new anymore, e.g. 3 to stop displaying the message on your user's fourth, fitfth, etc. visit" />
+    </params>
+    <params group="advanced">
+    	<param name="layout" type="filelist" label="Layout"
+			description="Style to display the message"
+			directory="modules/mod_sethgodin/tmpl"
+			default="default" hide_default="1" hide_none="1"
+			stripext="1" filter="\.php$" exclude="^_" />
+    </params>
+</install>

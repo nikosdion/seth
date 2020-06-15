@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install group="content" type="plugin" version="1.5.0" method="upgrade">
+  <name>Content - What would Seth Godin do?</name>
+  <author>Nicholas K. Dionysopoulos</author>
+  <creationDate>June 2009</creationDate>
+  <copyright>Copyright (c)2009 Nicholas K. Dionysopoulos / cmsmoz.com</copyright>
+  <license>GNU General Public License, version 3 of the license or - at your option - any later version</license>
+  <authorEmail>nicholas@joomlapack.net</authorEmail>
+  <authorUrl>www.cmsmoz.com</authorUrl>
+  <version>1.0</version>
+  <description>"What would Seth Godin do?" is a simple Joomla! plug-in based on Seth Godin's
+  idea to have a different user experience between "new" and "returning" visitors of your site,
+  based on a cookie set in their browsers. This plugin will display a custom message to your
+  new visitors. You can freely enter any message you please and set the time period to
+  consider a user "new", e.g. consider him new during his first three visits. The message
+  is displayed in single article view (on the top and bottom of the article text) without
+  the need to use any special markup.
+	</description>
+  <files>
+    <file plugin="sethgodin">sethgodin.php</file>
+  </files>
+  <params>
+  	<param name="message" type="textarea" default="&lt;p style=&quot;display: block; margin: 5px; padding: 5px; background-color: yellow; border: 2px solid red;&quot;&gt;Welcome to our site! Please subscribe to our &lt;a href=&quot;[SITE]/index.php?format=feed&quot;&gt;RSS feed&lt;/p&gt;" rows="6" cols="40" description="Message to show to new visitors" label="Custom Message" />
+	<param name="newvisits" type="text" default="3" label="New user Visit Limit" description="After how many visits the visitor isn't considered new anymore, e.g. 3 to stop displaying the message on your user's fourth, fitfth, etc. visit" />
+  </params>
+</install>
